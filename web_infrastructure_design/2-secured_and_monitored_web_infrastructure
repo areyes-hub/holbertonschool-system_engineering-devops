@@ -1,0 +1,23 @@
+Diagram:
+
+https://imgur.com/a/FL9R9mU
+
+Additional components:
+
+Firewalls: Three firewalls to control and filter traffic
+SSL Certificate: For HTTPS encryption
+Monitoring Clients: On each server, reporting to a monitoring service
+
+Explanation points:
+
+Firewalls protect servers by filtering traffic based on security rules
+HTTPS encrypts data in transit between user and server for security
+Monitoring collects metrics on performance, availability, and security
+Monitoring tools collect data through agents/clients on each server
+To monitor web server QPS (Queries Per Second), set up specific metrics for HTTP request counts
+
+Issues:
+
+SSL termination at load balancer exposes decrypted data within the internal network
+Single Primary database is still a bottleneck for write operations
+Uniform components on all servers prevent optimizing resources for specific functions

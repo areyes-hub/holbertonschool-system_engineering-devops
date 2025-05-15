@@ -1,0 +1,17 @@
+Diagram:
+
+https://imgur.com/a/Q6tSUcQ
+
+Additional components:
+
+Load Balancer Cluster: Two HAproxy instances working together
+Separate Web Server: Dedicated to handling HTTP requests
+Separate Application Server: Focused on application logic
+Separate Database Server: Dedicated to data management
+
+Explanation points:
+
+Additional server allows component separation for better performance and security
+Load balancer cluster provides redundancy and high availability
+Separating components allows for specialization and targeted scaling
+Each server can be optimized for its specific role (I/O for web server, CPU for application, etc.)

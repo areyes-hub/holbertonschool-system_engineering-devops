@@ -1,0 +1,23 @@
+Diagram:
+
+https://imgur.com/a/3llb8rs
+
+Additional components:
+
+Load Balancer (HAproxy): Distributes traffic between servers
+Server 1 & Server 2: Each containing web server, application server, and code base
+Database Cluster: Primary-Replica setup
+
+Explanation points:
+
+Load balancer is added to distribute traffic and prevent server overload
+HAproxy can be configured with algorithms like Round Robin (evenly distributes), Least Connection (sends to least busy server), or IP Hash (consistency for returning users)
+This setup can be Active-Active (both servers always handling traffic) or Active-Passive (one server on standby)
+Database Primary-Replica cluster: Primary handles writes, Replica handles reads and serves as backup
+Primary node processes write operations ensuring data consistency; Replica gets copies of data changes
+
+Issues:
+
+SPOF still exists in the load balancer
+Security concerns: No firewall or HTTPS encryption
+No monitoring system to track performance and issues

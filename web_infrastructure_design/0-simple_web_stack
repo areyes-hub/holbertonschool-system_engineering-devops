@@ -1,0 +1,29 @@
+Diagram:
+
+https://imgur.com/a/89GUsvu
+
+Components:
+
+User: Makes HTTP requests to the website using www.foobar.com
+DNS System: Resolves www.foobar.com to the server IP (8.8.8.8)
+Server: Contains all components of the web stack
+Nginx: Web server that handles HTTP requests
+Application Server: Processes dynamic content and business logic
+Application Files: Your code base
+MySQL Database: Stores and manages data
+
+Explanation points:
+
+A server is a physical or virtual machine that hosts services and applications
+The domain name (foobar.com) provides a human-readable way to access the server
+The 'www' in www.foobar.com is a CNAME or A record in DNS pointing to the server IP
+The web server (Nginx) handles HTTP requests, serves static content
+The application server executes application code and processes dynamic requests
+The database stores and manages persistent data for the application
+Communication happens over HTTP protocol between user's computer and server
+
+Issues:
+
+Single Point of Failure (SPOF): If the server goes down, the website is inaccessible
+Downtime during maintenance: Any updates require taking the service offline
+Limited scalability: Cannot handle high traffic volumes effectively
